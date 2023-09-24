@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Aziz Food Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <style>
+
+        /* Gaya kustom untuk teks bergerak */
+        .text-bergerak {
+            white-space: nowrap; /* Mencegah teks bergerak ke baris berikutnya */
+            overflow: hidden; /* Menyembunyikan teks yang melebihi lebar div */
+            animation: bergerak 10s linear infinite; /* Animasi untuk membuat teks bergerak */
+        }
+
+        @keyframes bergerak {
+            0% {
+                transform: translateX(100%); /* Awal posisi teks di luar layar sebelah kanan */
+            }
+
+            100% {
+                transform: translateX(-100%); /* Akhir posisi teks di luar layar sebelah kiri */
+            }
+        }
+
+        /* Gaya kustom untuk header */
+        .navbar-light {
+            background-color: #007BFF; /* Ubah warna latar belakang header sesuai keinginan Anda */
+        }
+
+        /* Gaya kustom untuk footer */
+        footer {
+            background-color: #0094ff; /* Ubah warna latar belakang footer sesuai keinginan Anda */
+            color: #2b1d82; /* Ubah warna teks footer agar kontras dengan latar belakang */
+            text-align: center; /* Teks di tengah footer */
+            padding: 10px 0; /* Ruang poling atas dan bawah pada footer */
+        }
+
+        /* Gaya kustom untuk body */
+        body {
+            background-color: #f8f9fa; /* Ubah warna latar belakang body sesuai keinginan Anda */
+            color: #3f059b; /* Ubah warna teks di body agar kontras dengan latar belakang */
+        }
+
+        /* Gaya kustom untuk latar belakang di luar header, footer, dan body */
+        html {
+            background-color: #48cd1f; /* Ganti '#CCCCCC' dengan kode warna latar belakang yang Anda inginkan */
+        }
+
+        /* Gaya kustom untuk latar belakang kontainer */
+        .header-container {
+            background-color: #aeefe0; /* Ganti kode warna dengan warna latar belakang yang Anda inginkan */
+            width: 70%; /* Sesuaikan persentase lebar sesuai keinginan Anda */
+            margin: 0 auto; /* Untuk membuat container berada di tengah halaman */
+            padding: 20px; /* Sesuaikan padding sesuai keinginan Anda */
+        }
+
+        /* CSS Flexbox untuk header-container */
+        .header-container {
+            display: flex;
+            align-items: center; /* Mengatur konten vertikal di tengah */
+            justify-content: center; /* Mengatur konten horizontal di tengah */
+            height: 100vh; /* Set tinggi header agar sejajar dengan tinggi viewport */
+        }
+
+
+        /* Menghilangkan bullets dari daftar dalam elemen dengan class "PilihanMenu" */
+        .PilihanMenu ul {
+            list-style: none;
+            padding: 0; /* Menghilangkan padding yang biasanya ada pada daftar */
+        }
+
+
+
+        .navbar-brand {
+            font-size: 24px; /* Ganti nilai font-size sesuai keinginan Anda */
+            color: white; /* Menyesuaikan warna teks dengan latar belakang biru */
+            text-align: center; /* Mengatur tata letak teks ke tengah *
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-light">
+        <a class="navbar-brand" href="#">Tugas Membuat Web HTML Minimal 3 Halaman Web yang Saling Terhubung</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toogle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <!-- ml-auto untuk membuat menu sejajar di sebelah kanan -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="Halaman_Utama.html">Halaman Utama (Beranda) </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Halaman_2.html">Halaman Detail </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Halaman3.html">Halaman Pemesanan</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="container header-container">
+            <!-- Isi konten header Anda di sini -->
+            <div class="jumbotron">
+                <h1 class="display-4">Anda Berada di Detail Produk dari Aziz Food Shop!</h1>
+                <div class="PilihanMenu">
+                    <ul>
+                        <li class="logo" style="text-align: center; margin-bottom: 10px;">
+                            <a href=""><img src="logo.png"></a>
+                        </li>
+                        <li style="padding-bottom: 10px;"><a href="Halaman_Utama.html" style="margin-bottom: 10px;">Tampilan Halaman Utama </a></li>
+                        <li style="padding-bottom: 10px;"><a href="Halaman_2.html" style="margin-bottom: 10px;">Halaman Detail </a> </li>
+                        <li style="padding-bottom: 10px;"><a href="Halaman3.html" style="margin-bottom: 10px;">Halaman Pemesanan </a> </li>
+                    </ul>
+                </div>
+            </div>
+    </header>
+    <div class="tampilan2">
+        <!-- Isi konten tampilan2 Anda di sini -->
+        <h1>Pemesanan</h1>
+
+        <button type="button" class="btn btn-primary" onclick="window.location.href='Halaman3.html'">Klik Saya</button>
+
+    </div>
+    <div class="tampilan2" style="margin-top: 10vh">
+        <div class="Makanan Berat">
+            <h1>Makanan Berat </h1>
+            <br>
+            <table>
+                <tbody>
+
+                    <tr><td>1.) Steak Daging Matang (per Porsi)</td><td>:</td><td>  Rp.45.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Kandungan kalori, protein, dan lemak dalam jumlah tinggi.</li>
+                                <li>Membantu dalam menambah massa tubuh.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>2.) Ikan Salmon Matang (per Porsi)</td><td>:</td><td>  Rp.40.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Sama halnya seperti daging merah, ikan salmon juga mengandung kalori, protein, dan lemak.</li>
+                                <li>Diperkaya oleh asam lemak omega-3 yang baik untuk kesehatan jantung dan lainnya.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+
+                    <tr><td>3.) Ayam Bakar Matang (per porsi)</td><td>:</td><td> Rp.20.0000</td></td>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>37% lemak sebanyak 3,82 gr, 0% karbohidrat, dan 63% protein.</li>
+                                <li>Kandungan kolesterol, sodium, dan kalium juga ada.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+
+                    <tr><td>4.) Ayam Goreng Matang (per porsi)</td><td>:</td><td> Rp.18.0000</td></td>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Ayam Goreng :</li>
+                                <ul>
+                                    <li>Kalori: 122</li>
+                                    <li>Protein: 24 gram</li>
+                                    <li>Karbohidrat: 0 gram</li>
+                                    <li>Niasin: 51%</li>
+                                    <li>Selenium: 36%</li>
+                                    <li>Fosfor: 17%</li>
+                                    <li>Vitamin B6: 16%</li>
+                                    <li>Vitamin B12: 10%</li>
+                                    <li>Reboflamin: 9%</li>
+                                    <li>Seng: 7%</li>
+                                    <li>Tiamin: 6%</li>
+                                    <li>Kalium: 5%</li>
+                                    <li>Tembaga: 4%</li>
+                                </ul>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>5.) Sayur Kacang Matang (Per Porsi)</td><td>:</td><td>  Rp.10.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Sayur Kacang Matang : Sayur kacang adalah sumber serat dan nutrisi penting lainnya yang baik untuk kesehatan.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>6.) Kentang Matang (per Porsi)</td><td>:</td><td>  Rp.10.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Kentang Matang : Kentang adalah sumber karbohidrat yang baik dan mengandung beberapa nutrisi penting.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>7.) Nasi Putih (per Porsi)</td><td>:</td><td>  Rp.7.000 </td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Nasi Putih : Nasi putih adalah sumber utama karbohidrat dalam makanan.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>8.) Telur Matang (Dadar)</td><td>:</td><td> Rp.8.000 </td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Telur Matang (Dadar) : Telur dadar adalah sumber protein dan berbagai nutrisi lainnya.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>9.) Telur Matang (Ceplok)</td><td>:</td><td> Rp.7.000 </td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Telur Matang (Ceplok) : Telur ceplok juga mengandung protein dan nutrisi yang baik untuk tubuh.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="MakananBerat">
+        <img src="MakananBerat.jpg" />
+    </div>
+    <div class="tampilan3">
+        <div class="MakananRingan">
+            <h1>Makanan Ringan</h1>
+            <br>
+            <table>
+                <tbody>
+                    <tr><td>1.) Keripik Singkong (per Bungkus)</td><td>:</td><td>Rp.5.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Keripik Singkong : merupakan camilan ringan yang terbuat dari singkong yang di potong, di tiriskan, dan digoreng hingga renyah.</li>
+                                <li>Manfaat Keripik Singkong : Camilan yang mengandung serat yang baik dan juga mengandung vitamin C yang baik untuk sistem kekebalan tubuh.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>2.) Keripik Pisang (per Bungkus)</td><td>:</td><td>Rp.7.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Keripik Pisang : merupakan camilan ringan manis yang terbuat dari pisang yang di potong, di tiriskan, dan digoreng hingga garing.</li>
+                                <li>Manfaat Keripik Pisang : Camilan yang mengandung kalium dan vitamin B6 yang baik untuk kesehatan jantung dan metabolisme.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>3.) Keripik Kentang (per Bungkus)</td><td>:</td><td>Rp.6.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Keripik Kentang : merupakan camilan ringan gurih yang terbuat dari kentang yang di potong, di tiriskan, dan digoreng hingga renyah.</li>
+                                <li>Manfaat Keripik Kentang : Camilan yang mengandung vitamin C dan Potassium yang baik untuk kesehatan kulit dan tekanan darah.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>4.) Keripik Salak (per Bungkus)</td><td>:</td><td>Rp.8.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Keripik Salak : merupakan camilan ringan eksotis yang terbuat dari buah salak yang di potong, di tiriskan, dan digoreng hingga renyah.</li>
+                                <li>Manfaat Keripik Salak : Camilan yang mengandung serat dan vitamin A yang baik untuk kesehatan mata dan pencernaan.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>5.) Keripik Udang (per Bungkus)</td><td>:</td><td>Rp.9.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Keripik Udang : merupakan camilan ringan gurih yang terbuat dari udang yang di potong, dan digoreng hingga renyah.</li>
+                                <li>Manfaat Keripik Udang : Camilan yang mengandung protein dan fosfor yang baik untuk pertumbuhan dan perkembangan tubuh.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>6.) Keripik Tempe (per Bungkus)</td><td>:</td><td>Rp.5.500</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Keripik Tempe : merupakan camilan ringan yang terbuat dari tempe yang di potong, di tiriskan, dan digoreng hingga garing.</li>
+                                <li>Manfaat Keripik Tempe : Camilan yang mengandung tempe mengandung protein nabati dan vitamin B12 yang baik untuk kesehatan otak dan sistem saraf.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>7.) Keripik Jagung (per Bungkus)</td><td>:</td><td>Rp.4.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Keripik Jagung : Keripik Jagung merupakan camilan ringan manis yang terbuat dari jagung yang di potong, di tiriskan, dan digoreng hingga garing.</li>
+                                <li>Manfaat Keripik Jagung : Camilan yang mengandung serat dan vitamin C yang baik untuk pencernaan dan sistem kekebalan tubuh.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class=MakananRingan>
+            <img src="MakananRingan.jpg">
+        </div>
+    </div>
+    <div class="tampilan4">
+        <div class="Minuman">
+            <h1>Minuman</h1>
+            <br>
+            <table>
+                <tbody>
+                    <tr><td>1.) Air Mineral (per Botol)</td><td>:</td><td>Rp.3.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Air Mineral : merupakan Minuman segar yang menghindrasi tubuh dengan baik. Cocok untuk melepas dahaga.</li>
+                                <li>Manfaat Air Mineral : Menghindari dehidrasi dan menjaga keseimbangan cairan tubuh.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>2.) Teh Manis Dingin (per Gelas)</td><td>:</td><td>Rp.5.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Teh Manis Dingin : merupakan Minuman teh yang menyegarkan dengan rasa manis yang pas, Cocok untuk menemani santai di siang hari.</li>
+                                <li>Manfaat Teh Manis Dingin : Memberikan rasa segar dan meningkatkan energi.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>3.) Kopi Hitam (per Cangkir)</td><td>:</td><td>Rp.7.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Kopi Hitam : merupakan Minuman kopi yang kaya akan aroma dan rasa. Memberikan semangat di pagi hari atau saat perlu konsentrasi tinggi.</li>
+                                <li>Manfaat Kopi Hitam : Meningkatkan kewaspadaan dan meningkatkan fokus.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>4.) Air Jeruk Segar (per Gelas)</td><td>:</td><td>Rp.10.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Jeruk Segar : merupakan Minuman jus segar yang mengandung banyak vitamin C. Baik untuk menjaga kesehatan dan kekebalan tubuh.</li>
+                                <li>Manfaat Jeruk Segar : Meningkatkan sistem kekebalan tubuh dan menyediakan vitamin dan antioksidan.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>5.) Jus Alpukat (per Gelas)</td><td>:</td><td>Rp.12.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Jus Alpukat : merupakan Minuman jus krimi yang lezat dan kaya akan nutrisi. Mengandung lemak sehat yang baik tubuh.</li>
+                                <li>Manfaat Jus Alpukat : Menyediakan lemak sehat dan mengoptimalkan fungsi otak.</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr><td>6.) Es Campur (per Mangkuk)</td><td>:</td><td>Rp.8.000</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <ul>
+                                <li>Es Campur : merupakan Minuman es dengan beragam bahan seperti es serut, buah, dan sirup. Memberikan sensasi dan manis dalam setiap sajian.</li>
+                                <li>Manfaat Es Campur : Menghilangkan rasa haus dan menyegarkan tubuh.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="Minuman">
+            <img src="Minuman.png">
+
+
+        </div>
+
+    </div><br><br><br>
+
+    <!-- Skrip Bootstrap JavaScript (opsional)-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+    <footer>Aziz Food Shop</footer>
+
+
+</body>
+</html>

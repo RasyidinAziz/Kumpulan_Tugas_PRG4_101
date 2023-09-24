@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Aziz Food Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <style>
+
+        /* Gaya kustom untuk teks bergerak */
+        .text-bergerak {
+            white-space: nowrap; /* Mencegah teks bergerak ke baris berikutnya */
+            overflow: hidden; /* Menyembunyikan teks yang melebihi lebar div */
+            animation: bergerak 10s linear infinite; /* Animasi untuk membuat teks bergerak */
+        }
+
+        @keyframes bergerak {
+            0% {
+                transform: translateX(100%); /* Awal posisi teks di luar layar sebelah kanan */
+            }
+
+            100% {
+                transform: translateX(-100%); /* Akhir posisi teks di luar layar sebelah kiri */
+            }
+        }
+
+        /* Gaya kustom untuk header */
+        .navbar-light {
+            background-color: #007BFF; /* Ubah warna latar belakang header sesuai keinginan Anda */
+        }
+
+        /* Gaya kustom untuk footer */
+        footer {
+            background-color: #0094ff; /* Ubah warna latar belakang footer sesuai keinginan Anda */
+            color: #2b1d82; /* Ubah warna teks footer agar kontras dengan latar belakang */
+            text-align: center; /* Teks di tengah footer */
+            padding: 10px 0; /* Ruang poling atas dan bawah pada footer */
+        }
+
+        /* Gaya kustom untuk body */
+        body {
+            background-color: #f8f9fa; /* Ubah warna latar belakang body sesuai keinginan Anda */
+            color: #3f059b; /* Ubah warna teks di body agar kontras dengan latar belakang */
+        }
+
+        /* Gaya kustom untuk latar belakang di luar header, footer, dan body */
+        html {
+            background-color: #48cd1f; /* Ganti '#CCCCCC' dengan kode warna latar belakang yang Anda inginkan */
+        }
+
+        /* Gaya kustom untuk latar belakang kontainer */
+        .header-container {
+            background-color: #aeefe0; /* Ganti kode warna dengan warna latar belakang yang Anda inginkan */
+            width: 70%; /* Sesuaikan persentase lebar sesuai keinginan Anda */
+            margin: 0 auto; /* Untuk membuat container berada di tengah halaman */
+            padding: 20px; /* Sesuaikan padding sesuai keinginan Anda */
+        }
+
+        /* CSS Flexbox untuk header-container */
+        .header-container {
+            display: flex;
+            align-items: center; /* Mengatur konten vertikal di tengah */
+            justify-content: center; /* Mengatur konten horizontal di tengah */
+            height: 100vh; /* Set tinggi header agar sejajar dengan tinggi viewport */
+        }
+
+
+        /* Menghilangkan bullets dari daftar dalam elemen dengan class "PilihanMenu" */
+        .PilihanMenu ul {
+            list-style: none;
+            padding: 0; /* Menghilangkan padding yang biasanya ada pada daftar */
+        }
+
+
+
+        .navbar-brand {
+            font-size: 24px; /* Ganti nilai font-size sesuai keinginan Anda */
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-light">
+        <!-- Isi navbar Anda di sini -->
+        <a class="navbar-brand" href="#">Tugas Membuat Web HTML Minimal 3 Halaman Web yang Saling Terhubung</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toogle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Jumbotron -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <!-- ml-auto untuk membuat menu sejajar di sebelah kanan -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="Halaman_Utama.html">Halaman Utama (Beranda) </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Halaman_2.html">Halaman Detail </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Halaman3.html">Halaman Pemesanan</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="container header-container">
+            <!-- Isi konten header Anda di sini -->
+            <div class="jumbotron">
+                <h1 class="display-4">Anda Berada di Pemesanan Aziz Food Shop!</h1>
+                <div class="PilihanMenu">
+                    <ul>
+                        <li class="logo" style="text-align: center; margin-bottom: 10px;">
+                            <a href=""><img src="logo.png"></a>
+                        </li>
+                        <li style="padding-bottom: 10px;"><a href="Halaman_Utama.html" style="margin-bottom: 10px;">Tampilan Halaman Utama </a></li>
+                        <li style="padding-bottom: 10px;"><a href="Halaman_2.html" style="margin-bottom: 10px;">Halaman Detail </a> </li>
+                        <li style="padding-bottom: 10px;"><a href="Halaman3.html" style="margin-bottom: 10px;">Halaman Pemesanan </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="tampilan1">
+        <!-- Isi konten tampilan1 Anda di sini -->
+        <h1>Detail</h1>
+
+        <button type="button" class="btn btn-primary" onclick="window.location.href='Halaman_2.html'">Klik Saya</button>
+
+        <br>
+        <br>
+
+        <li>Makanan Berat</li>
+        <div class="MakananBerat">
+            <img src="MakananBerat.jpg" />
+        </div>
+        <li>Makanan Ringan</li>
+        <div class=MakananRingan>
+            <img src="MakananRingan.jpg">
+        </div>
+        <li>Minuman</li>
+        <div class=Minuman>
+            <img src="Minuman.png">
+        </div>
+
+    </div>
+
+    <div class="tampilan2" style="margin-top: 10vh">
+        <div class="Makanan Berat">
+            <h1>Deskripsi</h1>
+            <p class="lead">
+                Selamat datang di Halaman Pemesanan, pada Aziz Food Shop, tempat di mana selera memenuhi kepuasan! Kami menawarkan berbagai pilihan makanan lezat untuk memanjakan lidah Anda. Dari hidangan berat yang menggugah selera hingga makanan ringan yang nikmat, serta minuman segar yang menyegarkan, semuanya ada di sini.
+                Kualitas dan rasa adalah prioritas utama kami. Bahan-bahan berkualitas tinggi dan bumbu-bumbu pilihan digunakan untuk setiap hidangan kami. Kami ingin memberikan pengalaman makan yang tak terlupakan bagi Anda.
+            </p>
+
+            <h1>Makanan Berat Enak,Sehat dan Bergizi</h1>
+            <p class="lead">Jangan lewatkan kesempatan untuk mencoba hidangan berat kami yang lezat! Dari steak daging matang hingga ikan salmon yang gurih, kami memiliki berbagai pilihan hidangan berat yang akan memuaskan selera Anda. Segera pesan dan nikmati kelezatan yang luar biasa!</p>
+
+            <h1>Makanan Ringan Pengganjal Kelaparan</h1>
+            <p class="lead"> Ingin camilan ringan yang menggugah selera? Coba koleksi keripik kami, dari keripik singkong yang renyah hingga keripik pisang yang manis. Dijamin, Anda akan ketagihan! Pesan sekarang untuk menemani momen santai Anda.</p>
+
+            <h1> Minuman yang Menyegarkan</h1>
+            <p class="lead">  Dingin, segar, dan sempurna untuk melepaskan dahaga! Pilih dari berbagai minuman kami, termasuk teh manis dingin, jus alpukat yang creamy, atau es campur yang menyegarkan. Lupakan dahaga Anda dengan minuman favorit Anda.</p>
+            <br>
+
+            <p class="lead">
+                Di Aziz Food Shop yang hebat,<br>
+                Makanan dan minuman lezat siap untuk dicoba.<br>
+                Dengan camilan ringan yang nikmat,<br>
+                Kami siapkan untuk menjamu Anda dengan penuh cinta.
+            </p>
+
+            <br>
+            <br>
+
+            <p class="lead" style="margin-top: 20px;">
+                Di restoran kami yang indah ini,<br>
+                Makanan lezat yang membuat hati berseri.<br>
+                Dari hidangan berat hingga camilan manis,<br>
+                Kami hadirkan kelezatan untuk Anda nikmati dengan bahagia.
+            </p>
+
+            <p class="lead" style="margin-top: 20px;">
+                Minuman segar yang menggoda selera,<br>
+                Mengalir dengan kenikmatan, begitu jelas.<br>
+                Pilihlah dengan bijak, penuhi dahaga Anda,<br>
+                Kami di sini untuk memberikan yang terbaik, dengan setia.
+            </p>
+
+            <p class="lead" style="margin-top: 20px;">
+                Mari bergabung di Aziz Food Shop yang istimewa,<br>
+                Tempat kuliner yang sempurna untuk semua orang.<br>
+                Dengan rasa dan cinta yang kami padukan,<br>
+                Kami undang Anda untuk menikmati makanan yang menggugah!
+            </p>
+
+            <br>
+            <br>
+
+            <p>Jika Anda masih memiliki pertanyaan, silakan <a href="https://wa.me/6281297332907">hubungi kami melalui WhatsApp</a>.</p>
+
+            <br>
+            <br>
+
+        </div>
+    </div>
+
+    <form action="proses_pemesanan.php" method="post">
+        <!-- Tabel dan Isi formulir Anda di sini -->
+        <div class="Detail">
+            <table>
+                <br>
+                <br>
+                <p class="lead">Mohon Mengisi Data Berikut, Untuk Melakukan Pemesanan pada Aziz Food Shop.</p>
+
+                <p class="lead"> Mohon Bisa Mengisikan Data Diri Anda Sebagai Pembeli Aziz Food Shop ini:</p>
+
+                <tr>
+                    <td class="Pemesan">Nama Pemesan</td>
+                    <td><input type="text" name="txtNama" size="30"></td>
+                </tr>
+                <tr>
+                    <td class="Pemesan">Email Pemesan</td>
+                    <td><input type="text" name="txtEmail" size="30"</td>
+                </tr>
+                <tr>
+                    <td class="Pemesan">Alamat Tujuan</td>
+                    <td><textarea name="txtAlamat" cols="32" rows="6"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="Pemesan">Telepon/No HP Pemesan</td>
+                    <td><input name="txtNomor" size="30"></td>
+                </tr>
+                <tr>
+                    <td class="Pemesan">Jenis Pesanan Yang Tersedia</td>
+                    <td>
+                        <select name="cmbJenisPesananyangtersedia">
+                            <option value="" disabled selected> Pilih Jenis Pesanan Yang Tersedia</option>
+                            <option>Steak Daging Matang (per Porsi) : Rp.45.000</option>
+                            <option>Ikan Salmon Matang (per Porsi) : Rp.40.000</option>
+                            <option>Ayam Bakar Matang (per Porsi) : Rp.20.000</option>
+                            <option>Ayam Goreng Matang (per Porsi) : Rp.18.000</option>
+                            <option>Sayur Kacang Matang (per Porsi) : Rp.10.000</option>
+                            <option>Kentang Matang (per porsi) : Rp.10.000</option>
+                            <option>Nasi Putih (per porsi) : Rp.7.000</option>
+                            <option>Telur Matang (Dadar) : Rp.8.000</option>
+                            <option>Telur Matang (Ceplok) : Rp.7.000</option>
+                            <option>Keripik Singkong (per Bungkus) : Rp.5.000</option>
+                            <option>Keripik Pisang (per Bungkus) : Rp.7.000</option>
+                            <option>Keripik Kentang (per Bungkus) : Rp.6.000</option>
+                            <option>Keripik Salak (per Bungkus) : Rp.8.000</option>
+                            <option>Keripik Udang (per Bungkus) : Rp.9.000</option>
+                            <option>Keripik Tempe (per Bungkus) : Rp.5.500</option>
+                            <option>Keripik Jagung (per Bungkus) : Rp.4.000</option>
+                            <option>Air Mineral (per Botol) : Rp.3.000</option>
+                            <option>Teh Manis Dingin (per Gelas) : Rp.5.000</option>
+                            <option>Kopi Hitam (per Cangkir) : Rp.7.000</option>
+                            <option>Air Jeruk Segar (per Gelas) : Rp.10.000</option>
+                            <option>Jus Alpukat (per Gelas) : Rp.12.000</option>
+                            <option>Es Campur (per Mangkuk) : Rp.8.000</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2" align="right">
+                        <br>
+                        <br>
+                        <!-- Tombol Kirim -->
+                        <div>
+                            <!-- Tombol Kirim -->
+                            <button type="submit" class="btn btn-success" style="margin-right: 10px;">Kirim</button>
+
+                            <!-- Tombol Batal -->
+                            <button type="reset" class="btn btn-danger ml-10">Batal</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </div><br><br><br>
+        <!-- Skrip Bootstrap JavaScript (opsional)-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+
+        <footer>Aziz Food Shop</footer>
+</body>
+</html>
